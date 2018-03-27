@@ -89,7 +89,7 @@ view push state = linearLayout [
       , margin "10,10,10,10"
     ]
     ([]
-    <> map (\(Tuple todo idx) -> (mapDom TODOElement.view push {todo: todo, idx : idx} DeleteElement) ) (zip state.todoList (0..((length state.todoList) - 1)) )
+    <> map (\(Tuple todo idx) -> (mapDom TODOElement.view push {todo: todo, idx : idx} UpdateElement) ) (zip state.todoList (0..((length state.todoList) - 1)) )
     )
       --(mapDom TODOElement.view push {todo: "First Item", idx : 0} DeleteElement)
     )
